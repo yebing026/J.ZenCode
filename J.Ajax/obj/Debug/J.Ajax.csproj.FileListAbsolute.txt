@@ -1,0 +1,5 @@
+D:\J.ZenCode\J.Ajax\bin\J.Ajax.dll
+D:\J.ZenCode\J.Ajax\bin\J.Ajax.pdb
+D:\J.ZenCode\J.Ajax\obj\Debug\ResolveAssemblyReference.cache
+D:\J.ZenCode\J.Ajax\obj\Debug\J.Ajax.dll
+D:\J.ZenCode\J.Ajax\obj\Debug\J.Ajax.pdb

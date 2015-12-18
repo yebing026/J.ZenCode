@@ -1,0 +1,1356 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{15F532A7-809E-4319-8CF8-5DE8D20143A9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>J.ZenCode</RootNamespace>
+    <AssemblyName>J.ZenCode</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controls\DataPager1.ascx" />
+    <Content Include="Controls\DataPager.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="GenCode.aspx" />
+    <Content Include="public\codeMirror\.gitattributes" />
+    <Content Include="public\codeMirror\.gitignore" />
+    <Content Include="public\codeMirror\addon\comment\comment.js" />
+    <Content Include="public\codeMirror\addon\comment\continuecomment.js" />
+    <Content Include="public\codeMirror\addon\dialog\dialog.css" />
+    <Content Include="public\codeMirror\addon\dialog\dialog.js" />
+    <Content Include="public\codeMirror\addon\display\autorefresh.js" />
+    <Content Include="public\codeMirror\addon\display\fullscreen.css" />
+    <Content Include="public\codeMirror\addon\display\fullscreen.js" />
+    <Content Include="public\codeMirror\addon\display\panel.js" />
+    <Content Include="public\codeMirror\addon\display\placeholder.js" />
+    <Content Include="public\codeMirror\addon\display\rulers.js" />
+    <Content Include="public\codeMirror\addon\edit\closebrackets.js" />
+    <Content Include="public\codeMirror\addon\edit\closetag.js" />
+    <Content Include="public\codeMirror\addon\edit\continuelist.js" />
+    <Content Include="public\codeMirror\addon\edit\matchbrackets.js" />
+    <Content Include="public\codeMirror\addon\edit\matchtags.js" />
+    <Content Include="public\codeMirror\addon\edit\trailingspace.js" />
+    <Content Include="public\codeMirror\addon\fold\brace-fold.js" />
+    <Content Include="public\codeMirror\addon\fold\comment-fold.js" />
+    <Content Include="public\codeMirror\addon\fold\foldcode.js" />
+    <Content Include="public\codeMirror\addon\fold\foldgutter.css" />
+    <Content Include="public\codeMirror\addon\fold\foldgutter.js" />
+    <Content Include="public\codeMirror\addon\fold\indent-fold.js" />
+    <Content Include="public\codeMirror\addon\fold\markdown-fold.js" />
+    <Content Include="public\codeMirror\addon\fold\xml-fold.js" />
+    <Content Include="public\codeMirror\addon\hint\anyword-hint.js" />
+    <Content Include="public\codeMirror\addon\hint\css-hint.js" />
+    <Content Include="public\codeMirror\addon\hint\html-hint.js" />
+    <Content Include="public\codeMirror\addon\hint\javascript-hint.js" />
+    <Content Include="public\codeMirror\addon\hint\show-hint.css" />
+    <Content Include="public\codeMirror\addon\hint\show-hint.js" />
+    <Content Include="public\codeMirror\addon\hint\sql-hint.js" />
+    <Content Include="public\codeMirror\addon\hint\xml-hint.js" />
+    <Content Include="public\codeMirror\addon\lint\coffeescript-lint.js" />
+    <Content Include="public\codeMirror\addon\lint\css-lint.js" />
+    <Content Include="public\codeMirror\addon\lint\html-lint.js" />
+    <Content Include="public\codeMirror\addon\lint\javascript-lint.js" />
+    <Content Include="public\codeMirror\addon\lint\json-lint.js" />
+    <Content Include="public\codeMirror\addon\lint\lint.css" />
+    <Content Include="public\codeMirror\addon\lint\lint.js" />
+    <Content Include="public\codeMirror\addon\lint\yaml-lint.js" />
+    <Content Include="public\codeMirror\addon\merge\merge.css" />
+    <Content Include="public\codeMirror\addon\merge\merge.js" />
+    <Content Include="public\codeMirror\addon\mode\loadmode.js" />
+    <Content Include="public\codeMirror\addon\mode\multiplex.js" />
+    <Content Include="public\codeMirror\addon\mode\multiplex_test.js" />
+    <Content Include="public\codeMirror\addon\mode\overlay.js" />
+    <Content Include="public\codeMirror\addon\mode\simple.js" />
+    <Content Include="public\codeMirror\addon\runmode\colorize.js" />
+    <Content Include="public\codeMirror\addon\runmode\runmode-standalone.js" />
+    <Content Include="public\codeMirror\addon\runmode\runmode.js" />
+    <Content Include="public\codeMirror\addon\runmode\runmode.node.js" />
+    <Content Include="public\codeMirror\addon\scroll\annotatescrollbar.js" />
+    <Content Include="public\codeMirror\addon\scroll\scrollpastend.js" />
+    <Content Include="public\codeMirror\addon\scroll\simplescrollbars.css" />
+    <Content Include="public\codeMirror\addon\scroll\simplescrollbars.js" />
+    <Content Include="public\codeMirror\addon\search\match-highlighter.js" />
+    <Content Include="public\codeMirror\addon\search\matchesonscrollbar.css" />
+    <Content Include="public\codeMirror\addon\search\matchesonscrollbar.js" />
+    <Content Include="public\codeMirror\addon\search\search.js" />
+    <Content Include="public\codeMirror\addon\search\searchcursor.js" />
+    <Content Include="public\codeMirror\addon\selection\active-line.js" />
+    <Content Include="public\codeMirror\addon\selection\mark-selection.js" />
+    <Content Include="public\codeMirror\addon\selection\selection-pointer.js" />
+    <Content Include="public\codeMirror\addon\tern\tern.css" />
+    <Content Include="public\codeMirror\addon\tern\tern.js" />
+    <Content Include="public\codeMirror\addon\tern\worker.js" />
+    <Content Include="public\codeMirror\addon\wrap\hardwrap.js" />
+    <Content Include="public\codeMirror\demo\activeline.html" />
+    <Content Include="public\codeMirror\demo\anywordhint.html" />
+    <Content Include="public\codeMirror\demo\bidi.html" />
+    <Content Include="public\codeMirror\demo\btree.html" />
+    <Content Include="public\codeMirror\demo\buffers.html" />
+    <Content Include="public\codeMirror\demo\changemode.html" />
+    <Content Include="public\codeMirror\demo\closebrackets.html" />
+    <Content Include="public\codeMirror\demo\closetag.html" />
+    <Content Include="public\codeMirror\demo\complete.html" />
+    <Content Include="public\codeMirror\demo\emacs.html" />
+    <Content Include="public\codeMirror\demo\folding.html" />
+    <Content Include="public\codeMirror\demo\fullscreen.html" />
+    <Content Include="public\codeMirror\demo\hardwrap.html" />
+    <Content Include="public\codeMirror\demo\html5complete.html" />
+    <Content Include="public\codeMirror\demo\indentwrap.html" />
+    <Content Include="public\codeMirror\demo\lint.html" />
+    <Content Include="public\codeMirror\demo\loadmode.html" />
+    <Content Include="public\codeMirror\demo\marker.html" />
+    <Content Include="public\codeMirror\demo\markselection.html" />
+    <Content Include="public\codeMirror\demo\matchhighlighter.html" />
+    <Content Include="public\codeMirror\demo\matchtags.html" />
+    <Content Include="public\codeMirror\demo\merge.html" />
+    <Content Include="public\codeMirror\demo\multiplex.html" />
+    <Content Include="public\codeMirror\demo\mustache.html" />
+    <Content Include="public\codeMirror\demo\panel.html" />
+    <Content Include="public\codeMirror\demo\placeholder.html" />
+    <Content Include="public\codeMirror\demo\preview.html" />
+    <Content Include="public\codeMirror\demo\requirejs.html" />
+    <Content Include="public\codeMirror\demo\resize.html" />
+    <Content Include="public\codeMirror\demo\rulers.html" />
+    <Content Include="public\codeMirror\demo\runmode.html" />
+    <Content Include="public\codeMirror\demo\search.html" />
+    <Content Include="public\codeMirror\demo\simplemode.html" />
+    <Content Include="public\codeMirror\demo\simplescrollbars.html" />
+    <Content Include="public\codeMirror\demo\spanaffectswrapping_shim.html" />
+    <Content Include="public\codeMirror\demo\sublime.html" />
+    <Content Include="public\codeMirror\demo\tern.html" />
+    <Content Include="public\codeMirror\demo\theme.html" />
+    <Content Include="public\codeMirror\demo\trailingspace.html" />
+    <Content Include="public\codeMirror\demo\variableheight.html" />
+    <Content Include="public\codeMirror\demo\vim.html" />
+    <Content Include="public\codeMirror\demo\visibletabs.html" />
+    <Content Include="public\codeMirror\demo\widget.html" />
+    <Content Include="public\codeMirror\demo\xmlcomplete.html" />
+    <Content Include="public\codeMirror\doc\activebookmark.js" />
+    <Content Include="public\codeMirror\doc\compress.html" />
+    <Content Include="public\codeMirror\doc\docs.css" />
+    <Content Include="public\codeMirror\doc\internals.html" />
+    <Content Include="public\codeMirror\doc\logo.png" />
+    <Content Include="public\codeMirror\doc\manual.html" />
+    <Content Include="public\codeMirror\doc\realworld.html" />
+    <Content Include="public\codeMirror\doc\releases.html" />
+    <Content Include="public\codeMirror\doc\reporting.html" />
+    <Content Include="public\codeMirror\doc\upgrade_v2.2.html" />
+    <Content Include="public\codeMirror\doc\upgrade_v3.html" />
+    <Content Include="public\codeMirror\doc\upgrade_v4.html" />
+    <Content Include="public\codeMirror\doc\yinyang.png" />
+    <Content Include="public\codeMirror\index.html" />
+    <Content Include="public\codeMirror\keymap\emacs.js" />
+    <Content Include="public\codeMirror\keymap\sublime.js" />
+    <Content Include="public\codeMirror\keymap\vim.js" />
+    <Content Include="public\codeMirror\lib\codemirror.css" />
+    <Content Include="public\codeMirror\lib\codemirror.js" />
+    <Content Include="public\codeMirror\mode\apl\apl.js" />
+    <Content Include="public\codeMirror\mode\apl\index.html" />
+    <Content Include="public\codeMirror\mode\asciiarmor\asciiarmor.js" />
+    <Content Include="public\codeMirror\mode\asciiarmor\index.html" />
+    <Content Include="public\codeMirror\mode\asn.1\asn.1.js" />
+    <Content Include="public\codeMirror\mode\asn.1\index.html" />
+    <Content Include="public\codeMirror\mode\asterisk\asterisk.js" />
+    <Content Include="public\codeMirror\mode\asterisk\index.html" />
+    <Content Include="public\codeMirror\mode\brainfuck\brainfuck.js" />
+    <Content Include="public\codeMirror\mode\brainfuck\index.html" />
+    <Content Include="public\codeMirror\mode\clike\clike.js" />
+    <Content Include="public\codeMirror\mode\clike\index.html" />
+    <Content Include="public\codeMirror\mode\clike\scala.html" />
+    <Content Include="public\codeMirror\mode\clike\test.js" />
+    <Content Include="public\codeMirror\mode\clojure\clojure.js" />
+    <Content Include="public\codeMirror\mode\clojure\index.html" />
+    <Content Include="public\codeMirror\mode\cmake\cmake.js" />
+    <Content Include="public\codeMirror\mode\cmake\index.html" />
+    <Content Include="public\codeMirror\mode\cobol\cobol.js" />
+    <Content Include="public\codeMirror\mode\cobol\index.html" />
+    <Content Include="public\codeMirror\mode\coffeescript\coffeescript.js" />
+    <Content Include="public\codeMirror\mode\coffeescript\index.html" />
+    <Content Include="public\codeMirror\mode\commonlisp\commonlisp.js" />
+    <Content Include="public\codeMirror\mode\commonlisp\index.html" />
+    <Content Include="public\codeMirror\mode\css\css.js" />
+    <Content Include="public\codeMirror\mode\css\gss.html" />
+    <Content Include="public\codeMirror\mode\css\gss_test.js" />
+    <Content Include="public\codeMirror\mode\css\index.html" />
+    <Content Include="public\codeMirror\mode\css\less.html" />
+    <Content Include="public\codeMirror\mode\css\less_test.js" />
+    <Content Include="public\codeMirror\mode\css\scss.html" />
+    <Content Include="public\codeMirror\mode\css\scss_test.js" />
+    <Content Include="public\codeMirror\mode\css\test.js" />
+    <Content Include="public\codeMirror\mode\cypher\cypher.js" />
+    <Content Include="public\codeMirror\mode\cypher\index.html" />
+    <Content Include="public\codeMirror\mode\dart\dart.js" />
+    <Content Include="public\codeMirror\mode\dart\index.html" />
+    <Content Include="public\codeMirror\mode\diff\diff.js" />
+    <Content Include="public\codeMirror\mode\diff\index.html" />
+    <Content Include="public\codeMirror\mode\django\django.js" />
+    <Content Include="public\codeMirror\mode\django\index.html" />
+    <Content Include="public\codeMirror\mode\dockerfile\dockerfile.js" />
+    <Content Include="public\codeMirror\mode\dockerfile\index.html" />
+    <Content Include="public\codeMirror\mode\dtd\dtd.js" />
+    <Content Include="public\codeMirror\mode\dtd\index.html" />
+    <Content Include="public\codeMirror\mode\dylan\dylan.js" />
+    <Content Include="public\codeMirror\mode\dylan\index.html" />
+    <Content Include="public\codeMirror\mode\d\d.js" />
+    <Content Include="public\codeMirror\mode\d\index.html" />
+    <Content Include="public\codeMirror\mode\ebnf\ebnf.js" />
+    <Content Include="public\codeMirror\mode\ebnf\index.html" />
+    <Content Include="public\codeMirror\mode\ecl\ecl.js" />
+    <Content Include="public\codeMirror\mode\ecl\index.html" />
+    <Content Include="public\codeMirror\mode\eiffel\eiffel.js" />
+    <Content Include="public\codeMirror\mode\eiffel\index.html" />
+    <Content Include="public\codeMirror\mode\elm\elm.js" />
+    <Content Include="public\codeMirror\mode\elm\index.html" />
+    <Content Include="public\codeMirror\mode\erlang\erlang.js" />
+    <Content Include="public\codeMirror\mode\erlang\index.html" />
+    <Content Include="public\codeMirror\mode\factor\factor.js" />
+    <Content Include="public\codeMirror\mode\factor\index.html" />
+    <Content Include="public\codeMirror\mode\forth\forth.js" />
+    <Content Include="public\codeMirror\mode\forth\index.html" />
+    <Content Include="public\codeMirror\mode\fortran\fortran.js" />
+    <Content Include="public\codeMirror\mode\fortran\index.html" />
+    <Content Include="public\codeMirror\mode\gas\gas.js" />
+    <Content Include="public\codeMirror\mode\gas\index.html" />
+    <Content Include="public\codeMirror\mode\gfm\gfm.js" />
+    <Content Include="public\codeMirror\mode\gfm\index.html" />
+    <Content Include="public\codeMirror\mode\gfm\test.js" />
+    <Content Include="public\codeMirror\mode\gherkin\gherkin.js" />
+    <Content Include="public\codeMirror\mode\gherkin\index.html" />
+    <Content Include="public\codeMirror\mode\go\go.js" />
+    <Content Include="public\codeMirror\mode\go\index.html" />
+    <Content Include="public\codeMirror\mode\groovy\groovy.js" />
+    <Content Include="public\codeMirror\mode\groovy\index.html" />
+    <Content Include="public\codeMirror\mode\haml\haml.js" />
+    <Content Include="public\codeMirror\mode\haml\index.html" />
+    <Content Include="public\codeMirror\mode\haml\test.js" />
+    <Content Include="public\codeMirror\mode\handlebars\handlebars.js" />
+    <Content Include="public\codeMirror\mode\handlebars\index.html" />
+    <Content Include="public\codeMirror\mode\haskell\haskell.js" />
+    <Content Include="public\codeMirror\mode\haskell\index.html" />
+    <Content Include="public\codeMirror\mode\haxe\haxe.js" />
+    <Content Include="public\codeMirror\mode\haxe\index.html" />
+    <Content Include="public\codeMirror\mode\htmlembedded\htmlembedded.js" />
+    <Content Include="public\codeMirror\mode\htmlembedded\index.html" />
+    <Content Include="public\codeMirror\mode\htmlmixed\htmlmixed.js" />
+    <Content Include="public\codeMirror\mode\htmlmixed\index.html" />
+    <Content Include="public\codeMirror\mode\http\http.js" />
+    <Content Include="public\codeMirror\mode\http\index.html" />
+    <Content Include="public\codeMirror\mode\idl\idl.js" />
+    <Content Include="public\codeMirror\mode\idl\index.html" />
+    <Content Include="public\codeMirror\mode\index.html" />
+    <Content Include="public\codeMirror\mode\jade\index.html" />
+    <Content Include="public\codeMirror\mode\jade\jade.js" />
+    <Content Include="public\codeMirror\mode\javascript\index.html" />
+    <Content Include="public\codeMirror\mode\javascript\javascript.js" />
+    <Content Include="public\codeMirror\mode\javascript\json-ld.html" />
+    <Content Include="public\codeMirror\mode\javascript\test.js" />
+    <Content Include="public\codeMirror\mode\javascript\typescript.html" />
+    <Content Include="public\codeMirror\mode\jinja2\index.html" />
+    <Content Include="public\codeMirror\mode\jinja2\jinja2.js" />
+    <Content Include="public\codeMirror\mode\julia\index.html" />
+    <Content Include="public\codeMirror\mode\julia\julia.js" />
+    <Content Include="public\codeMirror\mode\kotlin\index.html" />
+    <Content Include="public\codeMirror\mode\kotlin\kotlin.js" />
+    <Content Include="public\codeMirror\mode\livescript\index.html" />
+    <Content Include="public\codeMirror\mode\livescript\livescript.js" />
+    <Content Include="public\codeMirror\mode\lua\index.html" />
+    <Content Include="public\codeMirror\mode\lua\lua.js" />
+    <Content Include="public\codeMirror\mode\markdown\index.html" />
+    <Content Include="public\codeMirror\mode\markdown\markdown.js" />
+    <Content Include="public\codeMirror\mode\markdown\test.js" />
+    <Content Include="public\codeMirror\mode\mathematica\index.html" />
+    <Content Include="public\codeMirror\mode\mathematica\mathematica.js" />
+    <Content Include="public\codeMirror\mode\meta.js" />
+    <Content Include="public\codeMirror\mode\mirc\index.html" />
+    <Content Include="public\codeMirror\mode\mirc\mirc.js" />
+    <Content Include="public\codeMirror\mode\mllike\index.html" />
+    <Content Include="public\codeMirror\mode\mllike\mllike.js" />
+    <Content Include="public\codeMirror\mode\modelica\index.html" />
+    <Content Include="public\codeMirror\mode\modelica\modelica.js" />
+    <Content Include="public\codeMirror\mode\mumps\index.html" />
+    <Content Include="public\codeMirror\mode\mumps\mumps.js" />
+    <Content Include="public\codeMirror\mode\nginx\index.html" />
+    <Content Include="public\codeMirror\mode\nginx\nginx.js" />
+    <Content Include="public\codeMirror\mode\ntriples\index.html" />
+    <Content Include="public\codeMirror\mode\ntriples\ntriples.js" />
+    <Content Include="public\codeMirror\mode\octave\index.html" />
+    <Content Include="public\codeMirror\mode\octave\octave.js" />
+    <Content Include="public\codeMirror\mode\oz\index.html" />
+    <Content Include="public\codeMirror\mode\oz\oz.js" />
+    <Content Include="public\codeMirror\mode\pascal\index.html" />
+    <Content Include="public\codeMirror\mode\pascal\pascal.js" />
+    <Content Include="public\codeMirror\mode\pegjs\index.html" />
+    <Content Include="public\codeMirror\mode\pegjs\pegjs.js" />
+    <Content Include="public\codeMirror\mode\perl\index.html" />
+    <Content Include="public\codeMirror\mode\perl\perl.js" />
+    <Content Include="public\codeMirror\mode\php\index.html" />
+    <Content Include="public\codeMirror\mode\php\php.js" />
+    <Content Include="public\codeMirror\mode\php\test.js" />
+    <Content Include="public\codeMirror\mode\pig\index.html" />
+    <Content Include="public\codeMirror\mode\pig\pig.js" />
+    <Content Include="public\codeMirror\mode\properties\index.html" />
+    <Content Include="public\codeMirror\mode\properties\properties.js" />
+    <Content Include="public\codeMirror\mode\puppet\index.html" />
+    <Content Include="public\codeMirror\mode\puppet\puppet.js" />
+    <Content Include="public\codeMirror\mode\python\index.html" />
+    <Content Include="public\codeMirror\mode\python\python.js" />
+    <Content Include="public\codeMirror\mode\q\index.html" />
+    <Content Include="public\codeMirror\mode\q\q.js" />
+    <Content Include="public\codeMirror\mode\rpm\changes\index.html" />
+    <Content Include="public\codeMirror\mode\rpm\index.html" />
+    <Content Include="public\codeMirror\mode\rpm\rpm.js" />
+    <Content Include="public\codeMirror\mode\rst\index.html" />
+    <Content Include="public\codeMirror\mode\rst\rst.js" />
+    <Content Include="public\codeMirror\mode\ruby\index.html" />
+    <Content Include="public\codeMirror\mode\ruby\ruby.js" />
+    <Content Include="public\codeMirror\mode\ruby\test.js" />
+    <Content Include="public\codeMirror\mode\rust\index.html" />
+    <Content Include="public\codeMirror\mode\rust\rust.js" />
+    <Content Include="public\codeMirror\mode\rust\test.js" />
+    <Content Include="public\codeMirror\mode\r\index.html" />
+    <Content Include="public\codeMirror\mode\r\r.js" />
+    <Content Include="public\codeMirror\mode\sass\index.html" />
+    <Content Include="public\codeMirror\mode\sass\sass.js" />
+    <Content Include="public\codeMirror\mode\scheme\index.html" />
+    <Content Include="public\codeMirror\mode\scheme\scheme.js" />
+    <Content Include="public\codeMirror\mode\shell\index.html" />
+    <Content Include="public\codeMirror\mode\shell\shell.js" />
+    <Content Include="public\codeMirror\mode\shell\test.js" />
+    <Content Include="public\codeMirror\mode\sieve\index.html" />
+    <Content Include="public\codeMirror\mode\sieve\sieve.js" />
+    <Content Include="public\codeMirror\mode\slim\index.html" />
+    <Content Include="public\codeMirror\mode\slim\slim.js" />
+    <Content Include="public\codeMirror\mode\slim\test.js" />
+    <Content Include="public\codeMirror\mode\smalltalk\index.html" />
+    <Content Include="public\codeMirror\mode\smalltalk\smalltalk.js" />
+    <Content Include="public\codeMirror\mode\smarty\index.html" />
+    <Content Include="public\codeMirror\mode\smarty\smarty.js" />
+    <Content Include="public\codeMirror\mode\solr\index.html" />
+    <Content Include="public\codeMirror\mode\solr\solr.js" />
+    <Content Include="public\codeMirror\mode\soy\index.html" />
+    <Content Include="public\codeMirror\mode\soy\soy.js" />
+    <Content Include="public\codeMirror\mode\sparql\index.html" />
+    <Content Include="public\codeMirror\mode\sparql\sparql.js" />
+    <Content Include="public\codeMirror\mode\spreadsheet\index.html" />
+    <Content Include="public\codeMirror\mode\spreadsheet\spreadsheet.js" />
+    <Content Include="public\codeMirror\mode\sql\index.html" />
+    <Content Include="public\codeMirror\mode\sql\sql.js" />
+    <Content Include="public\codeMirror\mode\stex\index.html" />
+    <Content Include="public\codeMirror\mode\stex\stex.js" />
+    <Content Include="public\codeMirror\mode\stex\test.js" />
+    <Content Include="public\codeMirror\mode\stylus\index.html" />
+    <Content Include="public\codeMirror\mode\stylus\stylus.js" />
+    <Content Include="public\codeMirror\mode\swift\index.html" />
+    <Content Include="public\codeMirror\mode\swift\swift.js" />
+    <Content Include="public\codeMirror\mode\tcl\index.html" />
+    <Content Include="public\codeMirror\mode\tcl\tcl.js" />
+    <Content Include="public\codeMirror\mode\textile\index.html" />
+    <Content Include="public\codeMirror\mode\textile\test.js" />
+    <Content Include="public\codeMirror\mode\textile\textile.js" />
+    <Content Include="public\codeMirror\mode\tiddlywiki\index.html" />
+    <Content Include="public\codeMirror\mode\tiddlywiki\tiddlywiki.css" />
+    <Content Include="public\codeMirror\mode\tiddlywiki\tiddlywiki.js" />
+    <Content Include="public\codeMirror\mode\tiki\index.html" />
+    <Content Include="public\codeMirror\mode\tiki\tiki.css" />
+    <Content Include="public\codeMirror\mode\tiki\tiki.js" />
+    <Content Include="public\codeMirror\mode\toml\index.html" />
+    <Content Include="public\codeMirror\mode\toml\toml.js" />
+    <Content Include="public\codeMirror\mode\tornado\index.html" />
+    <Content Include="public\codeMirror\mode\tornado\tornado.js" />
+    <Content Include="public\codeMirror\mode\troff\index.html" />
+    <Content Include="public\codeMirror\mode\troff\troff.js" />
+    <Content Include="public\codeMirror\mode\ttcn-cfg\index.html" />
+    <Content Include="public\codeMirror\mode\ttcn-cfg\ttcn-cfg.js" />
+    <Content Include="public\codeMirror\mode\ttcn\index.html" />
+    <Content Include="public\codeMirror\mode\ttcn\ttcn.js" />
+    <Content Include="public\codeMirror\mode\turtle\index.html" />
+    <Content Include="public\codeMirror\mode\turtle\turtle.js" />
+    <Content Include="public\codeMirror\mode\twig\index.html" />
+    <Content Include="public\codeMirror\mode\twig\twig.js" />
+    <Content Include="public\codeMirror\mode\vbscript\index.html" />
+    <Content Include="public\codeMirror\mode\vbscript\vbscript.js" />
+    <Content Include="public\codeMirror\mode\vb\index.html" />
+    <Content Include="public\codeMirror\mode\vb\vb.js" />
+    <Content Include="public\codeMirror\mode\velocity\index.html" />
+    <Content Include="public\codeMirror\mode\velocity\velocity.js" />
+    <Content Include="public\codeMirror\mode\verilog\index.html" />
+    <Content Include="public\codeMirror\mode\verilog\test.js" />
+    <Content Include="public\codeMirror\mode\verilog\verilog.js" />
+    <Content Include="public\codeMirror\mode\vhdl\index.html" />
+    <Content Include="public\codeMirror\mode\vhdl\vhdl.js" />
+    <Content Include="public\codeMirror\mode\vue\index.html" />
+    <Content Include="public\codeMirror\mode\vue\vue.js" />
+    <Content Include="public\codeMirror\mode\xml\index.html" />
+    <Content Include="public\codeMirror\mode\xml\test.js" />
+    <Content Include="public\codeMirror\mode\xml\xml.js" />
+    <Content Include="public\codeMirror\mode\xquery\index.html" />
+    <Content Include="public\codeMirror\mode\xquery\test.js" />
+    <Content Include="public\codeMirror\mode\xquery\xquery.js" />
+    <Content Include="public\codeMirror\mode\yaml\index.html" />
+    <Content Include="public\codeMirror\mode\yaml\yaml.js" />
+    <Content Include="public\codeMirror\mode\z80\index.html" />
+    <Content Include="public\codeMirror\mode\z80\z80.js" />
+    <Content Include="public\codeMirror\test\comment_test.js" />
+    <Content Include="public\codeMirror\test\doc_test.js" />
+    <Content Include="public\codeMirror\test\driver.js" />
+    <Content Include="public\codeMirror\test\emacs_test.js" />
+    <Content Include="public\codeMirror\test\index.html" />
+    <Content Include="public\codeMirror\test\lint.js" />
+    <Content Include="public\codeMirror\test\mode_test.css" />
+    <Content Include="public\codeMirror\test\mode_test.js" />
+    <Content Include="public\codeMirror\test\multi_test.js" />
+    <Content Include="public\codeMirror\test\phantom_driver.js" />
+    <Content Include="public\codeMirror\test\run.js" />
+    <Content Include="public\codeMirror\test\scroll_test.js" />
+    <Content Include="public\codeMirror\test\search_test.js" />
+    <Content Include="public\codeMirror\test\sql-hint-test.js" />
+    <Content Include="public\codeMirror\test\sublime_test.js" />
+    <Content Include="public\codeMirror\test\test.js" />
+    <Content Include="public\codeMirror\test\vim_test.js" />
+    <Content Include="public\codeMirror\theme\3024-day.css" />
+    <Content Include="public\codeMirror\theme\3024-night.css" />
+    <Content Include="public\codeMirror\theme\abcdef.css" />
+    <Content Include="public\codeMirror\theme\ambiance-mobile.css" />
+    <Content Include="public\codeMirror\theme\ambiance.css" />
+    <Content Include="public\codeMirror\theme\base16-dark.css" />
+    <Content Include="public\codeMirror\theme\base16-light.css" />
+    <Content Include="public\codeMirror\theme\blackboard.css" />
+    <Content Include="public\codeMirror\theme\cobalt.css" />
+    <Content Include="public\codeMirror\theme\colorforth.css" />
+    <Content Include="public\codeMirror\theme\dracula.css" />
+    <Content Include="public\codeMirror\theme\eclipse.css" />
+    <Content Include="public\codeMirror\theme\elegant.css" />
+    <Content Include="public\codeMirror\theme\erlang-dark.css" />
+    <Content Include="public\codeMirror\theme\icecoder.css" />
+    <Content Include="public\codeMirror\theme\lesser-dark.css" />
+    <Content Include="public\codeMirror\theme\liquibyte.css" />
+    <Content Include="public\codeMirror\theme\material.css" />
+    <Content Include="public\codeMirror\theme\mbo.css" />
+    <Content Include="public\codeMirror\theme\mdn-like.css" />
+    <Content Include="public\codeMirror\theme\midnight.css" />
+    <Content Include="public\codeMirror\theme\monokai.css" />
+    <Content Include="public\codeMirror\theme\neat.css" />
+    <Content Include="public\codeMirror\theme\neo.css" />
+    <Content Include="public\codeMirror\theme\night.css" />
+    <Content Include="public\codeMirror\theme\paraiso-dark.css" />
+    <Content Include="public\codeMirror\theme\paraiso-light.css" />
+    <Content Include="public\codeMirror\theme\pastel-on-dark.css" />
+    <Content Include="public\codeMirror\theme\rubyblue.css" />
+    <Content Include="public\codeMirror\theme\seti.css" />
+    <Content Include="public\codeMirror\theme\solarized.css" />
+    <Content Include="public\codeMirror\theme\the-matrix.css" />
+    <Content Include="public\codeMirror\theme\tomorrow-night-bright.css" />
+    <Content Include="public\codeMirror\theme\tomorrow-night-eighties.css" />
+    <Content Include="public\codeMirror\theme\ttcn.css" />
+    <Content Include="public\codeMirror\theme\twilight.css" />
+    <Content Include="public\codeMirror\theme\vibrant-ink.css" />
+    <Content Include="public\codeMirror\theme\xq-dark.css" />
+    <Content Include="public\codeMirror\theme\xq-light.css" />
+    <Content Include="public\codeMirror\theme\yeti.css" />
+    <Content Include="public\codeMirror\theme\zenburn.css" />
+    <Content Include="public\dwz\dwz.frag.xml" />
+    <Content Include="public\dwz\js\additional-methods.js" />
+    <Content Include="public\dwz\js\dwz.accordion.js" />
+    <Content Include="public\dwz\js\dwz.ajax.js" />
+    <Content Include="public\dwz\js\dwz.alertmsg.js" />
+    <Content Include="public\dwz\js\dwz.bardrag.js" />
+    <Content Include="public\dwz\js\dwz.checkbox.js" />
+    <Content Include="public\dwz\js\dwz.combox.js" />
+    <Content Include="public\dwz\js\dwz.contextmenu.js" />
+    <Content Include="public\dwz\js\dwz.core.js" />
+    <Content Include="public\dwz\js\dwz.csstable.js" />
+    <Content Include="public\dwz\js\dwz.database.js" />
+    <Content Include="public\dwz\js\dwz.datepicker.js" />
+    <Content Include="public\dwz\js\dwz.dialog.js" />
+    <Content Include="public\dwz\js\dwz.dialogdrag.js" />
+    <Content Include="public\dwz\js\dwz.drag.js" />
+    <Content Include="public\dwz\js\dwz.effects.js" />
+    <Content Include="public\dwz\js\dwz.history.js" />
+    <Content Include="public\dwz\js\dwz.min.js" />
+    <Content Include="public\dwz\js\dwz.navtab.js" />
+    <Content Include="public\dwz\js\dwz.pagination.js" />
+    <Content Include="public\dwz\js\dwz.panel.js" />
+    <Content Include="public\dwz\js\dwz.print.js" />
+    <Content Include="public\dwz\js\dwz.regional.zh.js" />
+    <Content Include="public\dwz\js\dwz.resize.js" />
+    <Content Include="public\dwz\js\dwz.scrollCenter.js" />
+    <Content Include="public\dwz\js\dwz.sortdrag.js" />
+    <Content Include="public\dwz\js\dwz.stable.js" />
+    <Content Include="public\dwz\js\dwz.switchenv.js" />
+    <Content Include="public\dwz\js\dwz.tab.js" />
+    <Content Include="public\dwz\js\dwz.taskbar.js" />
+    <Content Include="public\dwz\js\dwz.theme.js" />
+    <Content Include="public\dwz\js\dwz.tree.js" />
+    <Content Include="public\dwz\js\dwz.ui.js" />
+    <Content Include="public\dwz\js\dwz.util.date.js" />
+    <Content Include="public\dwz\js\dwz.util.number.js" />
+    <Content Include="public\dwz\js\dwz.validate.method.js" />
+    <Content Include="public\dwz\js\jquery.bgiframe.js" />
+    <Content Include="public\dwz\js\jquery.cookie.js" />
+    <Content Include="public\dwz\js\jquery.easing.1.3.js" />
+    <Content Include="public\dwz\js\jquery.validate.js" />
+    <Content Include="public\dwz\js\jquery.validate.min.js" />
+    <Content Include="public\dwz\js\speedup.js" />
+    <Content Include="public\dwz\themes\azure\images\accordion\accordion.png" />
+    <Content Include="public\dwz\themes\azure\images\account_info_bg.png" />
+    <Content Include="public\dwz\themes\azure\images\alert\alertpanel.png" />
+    <Content Include="public\dwz\themes\azure\images\alert\alertpanel_icon.png" />
+    <Content Include="public\dwz\themes\azure\images\button\button_s.png" />
+    <Content Include="public\dwz\themes\azure\images\button\imgX.gif" />
+    <Content Include="public\dwz\themes\azure\images\button\imgX.png" />
+    <Content Include="public\dwz\themes\azure\images\dialog\dialogpanel.png" />
+    <Content Include="public\dwz\themes\azure\images\dialog\dialogpanel_icon.png" />
+    <Content Include="public\dwz\themes\azure\images\form\input_bg.png" />
+    <Content Include="public\dwz\themes\azure\images\form\input_bt.png" />
+    <Content Include="public\dwz\themes\azure\images\grid\grid.png" />
+    <Content Include="public\dwz\themes\azure\images\grid\resizeCol.png" />
+    <Content Include="public\dwz\themes\azure\images\grid\tableth.png" />
+    <Content Include="public\dwz\themes\azure\images\header_bg.png" />
+    <Content Include="public\dwz\themes\azure\images\icon.png" />
+    <Content Include="public\dwz\themes\azure\images\layout\taskbar.png" />
+    <Content Include="public\dwz\themes\azure\images\layout\taskbar_control.png" />
+    <Content Include="public\dwz\themes\azure\images\layout\taskbar_icon.png" />
+    <Content Include="public\dwz\themes\azure\images\layout\toggleSidebar.png" />
+    <Content Include="public\dwz\themes\azure\images\listLine.png" />
+    <Content Include="public\dwz\themes\azure\images\menu\menu.png" />
+    <Content Include="public\dwz\themes\azure\images\order_down.gif" />
+    <Content Include="public\dwz\themes\azure\images\order_up.gif" />
+    <Content Include="public\dwz\themes\azure\images\pageHeader_bg.png" />
+    <Content Include="public\dwz\themes\azure\images\panel\panel.png" />
+    <Content Include="public\dwz\themes\azure\images\panel\panel_icon.png" />
+    <Content Include="public\dwz\themes\azure\images\preview.png" />
+    <Content Include="public\dwz\themes\azure\images\progressBar\progressBar_l.gif" />
+    <Content Include="public\dwz\themes\azure\images\progressBar\progressBar_m.gif" />
+    <Content Include="public\dwz\themes\azure\images\progressBar\progressBar_s.gif" />
+    <Content Include="public\dwz\themes\azure\images\search-bg.gif" />
+    <Content Include="public\dwz\themes\azure\images\search-bt.gif" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_c_c.png" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_c_l.png" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_c_r.png" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_f_c.png" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_f_l.png" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_f_r.png" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_h_c.png" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_h_l.png" />
+    <Content Include="public\dwz\themes\azure\images\shadow\shadow_h_r.png" />
+    <Content Include="public\dwz\themes\azure\images\tabs\tabscontrol.png" />
+    <Content Include="public\dwz\themes\azure\images\tabs\tabspage.png" />
+    <Content Include="public\dwz\themes\azure\images\tabs\tabspage_icon.png" />
+    <Content Include="public\dwz\themes\azure\images\tabs\tabspanel.png" />
+    <Content Include="public\dwz\themes\azure\images\tree\check.png" />
+    <Content Include="public\dwz\themes\azure\images\tree\folder.png" />
+    <Content Include="public\dwz\themes\azure\images\tree\tree.png" />
+    <Content Include="public\dwz\themes\azure\style.css" />
+    <Content Include="public\dwz\themes\css\core.css" />
+    <Content Include="public\dwz\themes\css\ieHack.css" />
+    <Content Include="public\dwz\themes\css\login.css" />
+    <Content Include="public\dwz\themes\css\print.css" />
+    <Content Include="public\dwz\themes\default\images\accordion\accordion.png" />
+    <Content Include="public\dwz\themes\default\images\account_info_bg.png" />
+    <Content Include="public\dwz\themes\default\images\alert\alertpanel.png" />
+    <Content Include="public\dwz\themes\default\images\alert\alertpanel_icon.png" />
+    <Content Include="public\dwz\themes\default\images\button\button_s.png" />
+    <Content Include="public\dwz\themes\default\images\button\imgX.gif" />
+    <Content Include="public\dwz\themes\default\images\dialog\dialogpanel.png" />
+    <Content Include="public\dwz\themes\default\images\dialog\dialogpanel_icon.png" />
+    <Content Include="public\dwz\themes\default\images\form\input_bg.png" />
+    <Content Include="public\dwz\themes\default\images\form\input_bt.png" />
+    <Content Include="public\dwz\themes\default\images\grid\grid.png" />
+    <Content Include="public\dwz\themes\default\images\grid\resizeCol.png" />
+    <Content Include="public\dwz\themes\default\images\grid\tableth.png" />
+    <Content Include="public\dwz\themes\default\images\header_bg.png" />
+    <Content Include="public\dwz\themes\default\images\icon.png" />
+    <Content Include="public\dwz\themes\default\images\layout\taskbar.png" />
+    <Content Include="public\dwz\themes\default\images\layout\taskbar_control.png" />
+    <Content Include="public\dwz\themes\default\images\layout\taskbar_icon.png" />
+    <Content Include="public\dwz\themes\default\images\layout\toggleSidebar.png" />
+    <Content Include="public\dwz\themes\default\images\listLine.png" />
+    <Content Include="public\dwz\themes\default\images\login\bg_01.png" />
+    <Content Include="public\dwz\themes\default\images\login\bg_02.png" />
+    <Content Include="public\dwz\themes\default\images\login\bg_03.png" />
+    <Content Include="public\dwz\themes\default\images\login\bg_04.png" />
+    <Content Include="public\dwz\themes\default\images\login\body_bg.gif" />
+    <Content Include="public\dwz\themes\default\images\login\btn_bg.gif" />
+    <Content Include="public\dwz\themes\default\images\login\input_01.gif" />
+    <Content Include="public\dwz\themes\default\images\login\input_02.gif" />
+    <Content Include="public\dwz\themes\default\images\login\login.gif" />
+    <Content Include="public\dwz\themes\default\images\login_bg.png" />
+    <Content Include="public\dwz\themes\default\images\login_list.png" />
+    <Content Include="public\dwz\themes\default\images\logo.png" />
+    <Content Include="public\dwz\themes\default\images\logo1.png" />
+    <Content Include="public\dwz\themes\default\images\menu\menu.png" />
+    <Content Include="public\dwz\themes\default\images\message-error.jpg" />
+    <Content Include="public\dwz\themes\default\images\message-ok.jpg" />
+    <Content Include="public\dwz\themes\default\images\order_down.gif" />
+    <Content Include="public\dwz\themes\default\images\order_up.gif" />
+    <Content Include="public\dwz\themes\default\images\pageHeader_bg.png" />
+    <Content Include="public\dwz\themes\default\images\panel\panel.png" />
+    <Content Include="public\dwz\themes\default\images\panel\panel_icon.png" />
+    <Content Include="public\dwz\themes\default\images\progressBar\progressBar_l.gif" />
+    <Content Include="public\dwz\themes\default\images\progressBar\progressBar_m.gif" />
+    <Content Include="public\dwz\themes\default\images\progressBar\progressBar_s.gif" />
+    <Content Include="public\dwz\themes\default\images\rm.gif" />
+    <Content Include="public\dwz\themes\default\images\search-bg.gif" />
+    <Content Include="public\dwz\themes\default\images\search-bt.gif" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_c_c.png" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_c_l.png" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_c_r.png" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_f_c.png" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_f_l.png" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_f_r.png" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_h_c.png" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_h_l.png" />
+    <Content Include="public\dwz\themes\default\images\shadow\shadow_h_r.png" />
+    <Content Include="public\dwz\themes\default\images\tabs\tabscontrol.png" />
+    <Content Include="public\dwz\themes\default\images\tabs\tabspage.png" />
+    <Content Include="public\dwz\themes\default\images\tabs\tabspage_icon.png" />
+    <Content Include="public\dwz\themes\default\images\tabs\tabspanel.png" />
+    <Content Include="public\dwz\themes\default\images\themeButton.png" />
+    <Content Include="public\dwz\themes\default\images\tree\check.png" />
+    <Content Include="public\dwz\themes\default\images\tree\folder.png" />
+    <Content Include="public\dwz\themes\default\images\tree\tree.png" />
+    <Content Include="public\dwz\themes\default\images\wmv.gif" />
+    <Content Include="public\dwz\themes\default\style.css" />
+    <Content Include="public\dwz\themes\green\images\accordion\accordion.png" />
+    <Content Include="public\dwz\themes\green\images\account_info_bg.png" />
+    <Content Include="public\dwz\themes\green\images\alert\alertpanel.png" />
+    <Content Include="public\dwz\themes\green\images\alert\alertpanel_icon.png" />
+    <Content Include="public\dwz\themes\green\images\button\button_s.png" />
+    <Content Include="public\dwz\themes\green\images\dialog\dialogpanel.png" />
+    <Content Include="public\dwz\themes\green\images\dialog\dialogpanel_icon.png" />
+    <Content Include="public\dwz\themes\green\images\form\input_bg.png" />
+    <Content Include="public\dwz\themes\green\images\form\input_bt.png" />
+    <Content Include="public\dwz\themes\green\images\grid\grid.png" />
+    <Content Include="public\dwz\themes\green\images\grid\resizeCol.png" />
+    <Content Include="public\dwz\themes\green\images\grid\tableth.png" />
+    <Content Include="public\dwz\themes\green\images\header_bg.png" />
+    <Content Include="public\dwz\themes\green\images\layout\toggleSidebar.png" />
+    <Content Include="public\dwz\themes\green\images\listLine.png" />
+    <Content Include="public\dwz\themes\green\images\logo.png" />
+    <Content Include="public\dwz\themes\green\images\pageHeader_bg.png" />
+    <Content Include="public\dwz\themes\green\images\panel\panel.png" />
+    <Content Include="public\dwz\themes\green\images\panel\panel_icon.png" />
+    <Content Include="public\dwz\themes\green\images\tabs\tabscontrol.png" />
+    <Content Include="public\dwz\themes\green\images\tabs\tabspage.png" />
+    <Content Include="public\dwz\themes\green\images\tabs\tabspage_icon.png" />
+    <Content Include="public\dwz\themes\green\images\tabs\tabspanel.png" />
+    <Content Include="public\dwz\themes\green\images\tree\tree.png" />
+    <Content Include="public\dwz\themes\green\style.css" />
+    <Content Include="public\dwz\themes\purple\images\accordion\accordion.png" />
+    <Content Include="public\dwz\themes\purple\images\account_info_bg.png" />
+    <Content Include="public\dwz\themes\purple\images\alert\alertpanel.png" />
+    <Content Include="public\dwz\themes\purple\images\alert\alertpanel_icon.png" />
+    <Content Include="public\dwz\themes\purple\images\button\button_s.png" />
+    <Content Include="public\dwz\themes\purple\images\dialog\dialogpanel.png" />
+    <Content Include="public\dwz\themes\purple\images\dialog\dialogpanel_icon.png" />
+    <Content Include="public\dwz\themes\purple\images\form\input_bg.png" />
+    <Content Include="public\dwz\themes\purple\images\form\input_bt.png" />
+    <Content Include="public\dwz\themes\purple\images\grid\grid.png" />
+    <Content Include="public\dwz\themes\purple\images\grid\resizeCol.png" />
+    <Content Include="public\dwz\themes\purple\images\grid\tableth.png" />
+    <Content Include="public\dwz\themes\purple\images\header_bg.png" />
+    <Content Include="public\dwz\themes\purple\images\layout\taskbar.png" />
+    <Content Include="public\dwz\themes\purple\images\layout\taskbar_control.png" />
+    <Content Include="public\dwz\themes\purple\images\layout\taskbar_icon.png" />
+    <Content Include="public\dwz\themes\purple\images\layout\toggleSidebar.png" />
+    <Content Include="public\dwz\themes\purple\images\login_bg.png" />
+    <Content Include="public\dwz\themes\purple\images\login_content_bg.png" />
+    <Content Include="public\dwz\themes\purple\images\login_header_bg.png" />
+    <Content Include="public\dwz\themes\purple\images\login_list.png" />
+    <Content Include="public\dwz\themes\purple\images\menu\menu.png" />
+    <Content Include="public\dwz\themes\purple\images\pageHeader_bg.png" />
+    <Content Include="public\dwz\themes\purple\images\panel\panel.png" />
+    <Content Include="public\dwz\themes\purple\images\panel\panel_icon.png" />
+    <Content Include="public\dwz\themes\purple\images\progressBar\progressBar_l.gif" />
+    <Content Include="public\dwz\themes\purple\images\progressBar\progressBar_m.gif" />
+    <Content Include="public\dwz\themes\purple\images\progressBar\progressBar_s.gif" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_c_c.png" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_c_l.png" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_c_r.png" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_f_c.png" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_f_l.png" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_f_r.png" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_h_c.png" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_h_l.png" />
+    <Content Include="public\dwz\themes\purple\images\shadow\shadow_h_r.png" />
+    <Content Include="public\dwz\themes\purple\images\tabs\tabscontrol.png" />
+    <Content Include="public\dwz\themes\purple\images\tabs\tabspage.png" />
+    <Content Include="public\dwz\themes\purple\images\tabs\tabspage_icon.png" />
+    <Content Include="public\dwz\themes\purple\images\tabs\tabspanel.png" />
+    <Content Include="public\dwz\themes\purple\images\tree\check.png" />
+    <Content Include="public\dwz\themes\purple\images\tree\folder.png" />
+    <Content Include="public\dwz\themes\purple\images\tree\tree.png" />
+    <Content Include="public\dwz\themes\purple\style.css" />
+    <Content Include="public\dwz\themes\silver\images\accordion\accordion.png" />
+    <Content Include="public\dwz\themes\silver\images\account_info_bg.png" />
+    <Content Include="public\dwz\themes\silver\images\alert\alertpanel.png" />
+    <Content Include="public\dwz\themes\silver\images\alert\alertpanel_icon.png" />
+    <Content Include="public\dwz\themes\silver\images\button\button_s.png" />
+    <Content Include="public\dwz\themes\silver\images\dialog\dialogpanel.png" />
+    <Content Include="public\dwz\themes\silver\images\dialog\dialogpanel_icon.png" />
+    <Content Include="public\dwz\themes\silver\images\form\input_bg.png" />
+    <Content Include="public\dwz\themes\silver\images\form\input_bt.png" />
+    <Content Include="public\dwz\themes\silver\images\grid\grid.png" />
+    <Content Include="public\dwz\themes\silver\images\grid\resizeCol.png" />
+    <Content Include="public\dwz\themes\silver\images\grid\tableth.png" />
+    <Content Include="public\dwz\themes\silver\images\header_bg.png" />
+    <Content Include="public\dwz\themes\silver\images\layout\taskbar.png" />
+    <Content Include="public\dwz\themes\silver\images\layout\taskbar_control.png" />
+    <Content Include="public\dwz\themes\silver\images\layout\taskbar_icon.png" />
+    <Content Include="public\dwz\themes\silver\images\layout\toggleSidebar.png" />
+    <Content Include="public\dwz\themes\silver\images\listLine.png" />
+    <Content Include="public\dwz\themes\silver\images\logo.png" />
+    <Content Include="public\dwz\themes\silver\images\menu\menu.png" />
+    <Content Include="public\dwz\themes\silver\images\pageHeader_bg.png" />
+    <Content Include="public\dwz\themes\silver\images\panel\panel.png" />
+    <Content Include="public\dwz\themes\silver\images\panel\panel_icon.png" />
+    <Content Include="public\dwz\themes\silver\images\progressBar\progressBar_l.gif" />
+    <Content Include="public\dwz\themes\silver\images\progressBar\progressBar_m.gif" />
+    <Content Include="public\dwz\themes\silver\images\progressBar\progressBar_s.gif" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_c_c.png" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_c_l.png" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_c_r.png" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_f_c.png" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_f_l.png" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_f_r.png" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_h_c.png" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_h_l.png" />
+    <Content Include="public\dwz\themes\silver\images\shadow\shadow_h_r.png" />
+    <Content Include="public\dwz\themes\silver\images\tabs\tabscontrol.png" />
+    <Content Include="public\dwz\themes\silver\images\tabs\tabspage.png" />
+    <Content Include="public\dwz\themes\silver\images\tabs\tabspage_icon.png" />
+    <Content Include="public\dwz\themes\silver\images\tabs\tabspanel.png" />
+    <Content Include="public\dwz\themes\silver\images\tree\check.png" />
+    <Content Include="public\dwz\themes\silver\images\tree\folder.png" />
+    <Content Include="public\dwz\themes\silver\images\tree\tree.png" />
+    <Content Include="public\dwz\themes\silver\style.css" />
+    <Content Include="public\images\checked.gif" />
+    <Content Include="public\images\datagrid_title_bg.png" />
+    <Content Include="public\images\fanYi.png" />
+    <Content Include="public\images\FooterBackground.gif" />
+    <Content Include="public\images\FooterBackground.png" />
+    <Content Include="public\images\IconSearch.gif" />
+    <Content Include="public\images\imgX.gif" />
+    <Content Include="public\images\PagingFirst.png" />
+    <Content Include="public\images\PagingLast.png" />
+    <Content Include="public\images\PagingNext.png" />
+    <Content Include="public\images\PagingPrevious.png" />
+    <Content Include="public\images\RecordView.png" />
+    <Content Include="public\images\unchecked.gif" />
+    <Content Include="public\js\jquery.zclip.min.js" />
+    <Content Include="public\js\prettify\lang-sql.js" />
+    <Content Include="public\js\prettify\prettify.css" />
+    <Content Include="public\js\prettify\prettify.js" />
+    <Content Include="public\js\ZeroClipboard.swf" />
+    <Content Include="Set\MobanEdit.aspx" />
+    <Content Include="public\css\pure.css" />
+    <Content Include="public\css\site.css" />
+    <Content Include="public\images\404.jpg" />
+    <Content Include="public\images\ajaxloading.gif" />
+    <Content Include="public\images\button_arrow_left.gif" />
+    <Content Include="public\images\button_arrow_right.gif" />
+    <Content Include="public\images\code.png" />
+    <Content Include="public\images\cross.png" />
+    <Content Include="public\images\del.gif" />
+    <Content Include="public\images\error.gif" />
+    <Content Include="public\images\error.png" />
+    <Content Include="public\images\ext\asa.GIF" />
+    <Content Include="public\images\ext\ascx.gif" />
+    <Content Include="public\images\ext\asf.gif" />
+    <Content Include="public\images\ext\asp.gif" />
+    <Content Include="public\images\ext\aspx.gif" />
+    <Content Include="public\images\ext\asx.gif" />
+    <Content Include="public\images\ext\avi.png" />
+    <Content Include="public\images\ext\blank.gif" />
+    <Content Include="public\images\ext\blank.png" />
+    <Content Include="public\images\ext\bmp.gif" />
+    <Content Include="public\images\ext\chm.gif" />
+    <Content Include="public\images\ext\config.gif" />
+    <Content Include="public\images\ext\cs.gif" />
+    <Content Include="public\images\ext\css.gif" />
+    <Content Include="public\images\ext\css.png" />
+    <Content Include="public\images\ext\csv.GIF" />
+    <Content Include="public\images\ext\csv.png" />
+    <Content Include="public\images\ext\dir.gif" />
+    <Content Include="public\images\ext\dir2.gif" />
+    <Content Include="public\images\ext\dll.gif" />
+    <Content Include="public\images\ext\do.gif" />
+    <Content Include="public\images\ext\do.png" />
+    <Content Include="public\images\ext\doc.GIF" />
+    <Content Include="public\images\ext\doc.png" />
+    <Content Include="public\images\ext\docx.gif" />
+    <Content Include="public\images\ext\dot.png" />
+    <Content Include="public\images\ext\exe.gif" />
+    <Content Include="public\images\ext\file_topdir.gif" />
+    <Content Include="public\images\ext\file_unknow.gif" />
+    <Content Include="public\images\ext\fla.gif" />
+    <Content Include="public\images\ext\flv.png" />
+    <Content Include="public\images\ext\gif.gif" />
+    <Content Include="public\images\ext\gim.GIF" />
+    <Content Include="public\images\ext\hlp.gif" />
+    <Content Include="public\images\ext\htm.GIF" />
+    <Content Include="public\images\ext\html.GIF" />
+    <Content Include="public\images\ext\ini.GIF" />
+    <Content Include="public\images\ext\ins.GIF" />
+    <Content Include="public\images\ext\jpeg.gif" />
+    <Content Include="public\images\ext\jpg.gif" />
+    <Content Include="public\images\ext\js.gif" />
+    <Content Include="public\images\ext\m1v.GIF" />
+    <Content Include="public\images\ext\m3u.GIF" />
+    <Content Include="public\images\ext\maw.GIF" />
+    <Content Include="public\images\ext\mdb.GIF" />
+    <Content Include="public\images\ext\mdb.png" />
+    <Content Include="public\images\ext\mid.GIF" />
+    <Content Include="public\images\ext\midi.gif" />
+    <Content Include="public\images\ext\mov.png" />
+    <Content Include="public\images\ext\mp3.gif" />
+    <Content Include="public\images\ext\mp3.png" />
+    <Content Include="public\images\ext\mp4.png" />
+    <Content Include="public\images\ext\mpeg.gif" />
+    <Content Include="public\images\ext\mpg.gif" />
+    <Content Include="public\images\ext\mpp.GIF" />
+    <Content Include="public\images\ext\msc.GIF" />
+    <Content Include="public\images\ext\odc.png" />
+    <Content Include="public\images\ext\odd.png" />
+    <Content Include="public\images\ext\odt.png" />
+    <Content Include="public\images\ext\ogg.png" />
+    <Content Include="public\images\ext\other.gif" />
+    <Content Include="public\images\ext\pdf.gif" />
+    <Content Include="public\images\ext\pdf.png" />
+    <Content Include="public\images\ext\php.gif" />
+    <Content Include="public\images\ext\png.gif" />
+    <Content Include="public\images\ext\ppt.GIF" />
+    <Content Include="public\images\ext\ppt.png" />
+    <Content Include="public\images\ext\psd.gif" />
+    <Content Include="public\images\ext\psd.png" />
+    <Content Include="public\images\ext\rar.gif" />
+    <Content Include="public\images\ext\rar.png" />
+    <Content Include="public\images\ext\rm.gif" />
+    <Content Include="public\images\ext\rmvb.gif" />
+    <Content Include="public\images\ext\rtf.png" />
+    <Content Include="public\images\ext\shtml.gif" />
+    <Content Include="public\images\ext\svg.png" />
+    <Content Include="public\images\ext\swf.gif" />
+    <Content Include="public\images\ext\swf.png" />
+    <Content Include="public\images\ext\sxd.png" />
+    <Content Include="public\images\ext\tar.png" />
+    <Content Include="public\images\ext\tgz.png" />
+    <Content Include="public\images\ext\tif.GIF" />
+    <Content Include="public\images\ext\txt.GIF" />
+    <Content Include="public\images\ext\txt.png" />
+    <Content Include="public\images\ext\unknow.GIF" />
+    <Content Include="public\images\ext\URL16.GIF" />
+    <Content Include="public\images\ext\vb.gif" />
+    <Content Include="public\images\ext\vdx.GIF" />
+    <Content Include="public\images\ext\vxd.GIF" />
+    <Content Include="public\images\ext\wav.GIF" />
+    <Content Include="public\images\ext\wma.GIF" />
+    <Content Include="public\images\ext\wma.png" />
+    <Content Include="public\images\ext\wmv.gif" />
+    <Content Include="public\images\ext\wmv.png" />
+    <Content Include="public\images\ext\xls.GIF" />
+    <Content Include="public\images\ext\xls.png" />
+    <Content Include="public\images\ext\xml.GIF" />
+    <Content Include="public\images\ext\xml16.GIF" />
+    <Content Include="public\images\ext\zip.GIF" />
+    <Content Include="public\images\ext\zip.png" />
+    <Content Include="public\images\file.gif" />
+    <Content Include="public\images\folder.gif" />
+    <Content Include="public\images\index.htm" />
+    <Content Include="public\images\lmenu_bg.gif" />
+    <Content Include="public\images\locked.gif" />
+    <Content Include="public\images\locked.png" />
+    <Content Include="public\images\msg_loading.gif" />
+    <Content Include="public\images\msg_loading_d.gif" />
+    <Content Include="public\images\nav_link.png" />
+    <Content Include="public\images\noimg.jpg" />
+    <Content Include="public\images\nopic.jpg" />
+    <Content Include="public\images\ok.gif" />
+    <Content Include="public\images\ok.png" />
+    <Content Include="public\images\prected.gif" />
+    <Content Include="public\images\success.gif" />
+    <Content Include="public\js\artDialog4\jquery.artDialog.js" />
+    <Content Include="public\js\artDialog4\jquery.artDialog.source.js" />
+    <Content Include="public\js\artDialog4\plugins\iframeTools.js" />
+    <Content Include="public\js\artDialog4\plugins\iframeTools.source.js" />
+    <Content Include="public\js\artDialog4\skins\aero.css" />
+    <Content Include="public\js\artDialog4\skins\aero\aero_s.png" />
+    <Content Include="public\js\artDialog4\skins\aero\aero_s2.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_close.hover.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_close.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_e.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_n.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_ne.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_nw.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_s.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_se.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_sw.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_title_icon.png" />
+    <Content Include="public\js\artDialog4\skins\aero\ie6\aui_w.png" />
+    <Content Include="public\js\artDialog4\skins\black.css" />
+    <Content Include="public\js\artDialog4\skins\black\bg.png" />
+    <Content Include="public\js\artDialog4\skins\black\bg2.png" />
+    <Content Include="public\js\artDialog4\skins\black\bg_css3.png" />
+    <Content Include="public\js\artDialog4\skins\black\bg_css3_2.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\close.hover.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\close.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\e.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\n.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\ne.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\nw.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\s.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\se.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\sw.png" />
+    <Content Include="public\js\artDialog4\skins\black\ie6\w.png" />
+    <Content Include="public\js\artDialog4\skins\blue.css" />
+    <Content Include="public\js\artDialog4\skins\blue\bg.png" />
+    <Content Include="public\js\artDialog4\skins\blue\bg2.png" />
+    <Content Include="public\js\artDialog4\skins\blue\bg_css3.png" />
+    <Content Include="public\js\artDialog4\skins\blue\bg_css3_2.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\close.hover.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\close.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\e.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\n.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\ne.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\nw.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\s.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\se.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\sw.png" />
+    <Content Include="public\js\artDialog4\skins\blue\ie6\w.png" />
+    <Content Include="public\js\artDialog4\skins\chrome.css" />
+    <Content Include="public\js\artDialog4\skins\chrome\border.png" />
+    <Content Include="public\js\artDialog4\skins\chrome\chrome_s.png" />
+    <Content Include="public\js\artDialog4\skins\default.css" />
+    <Content Include="public\js\artDialog4\skins\green.css" />
+    <Content Include="public\js\artDialog4\skins\green\bg.png" />
+    <Content Include="public\js\artDialog4\skins\green\bg2.png" />
+    <Content Include="public\js\artDialog4\skins\green\bg_css3.png" />
+    <Content Include="public\js\artDialog4\skins\green\bg_css3_2.png" />
+    <Content Include="public\js\artDialog4\skins\green\color_bg.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\close.hover.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\close.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\e.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\n.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\ne.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\nw.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\s.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\se.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\sw.png" />
+    <Content Include="public\js\artDialog4\skins\green\ie6\w.png" />
+    <Content Include="public\js\artDialog4\skins\icons\error.png" />
+    <Content Include="public\js\artDialog4\skins\icons\face-sad.png" />
+    <Content Include="public\js\artDialog4\skins\icons\face-smile.png" />
+    <Content Include="public\js\artDialog4\skins\icons\loading.gif" />
+    <Content Include="public\js\artDialog4\skins\icons\question.png" />
+    <Content Include="public\js\artDialog4\skins\icons\succeed.png" />
+    <Content Include="public\js\artDialog4\skins\icons\warning.png" />
+    <Content Include="public\js\artDialog4\skins\idialog.css" />
+    <Content Include="public\js\artDialog4\skins\idialog\idialog_s.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\idialog_s2.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_close.hover.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_close.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_e.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_n.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_ne.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_nw.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_s.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_se.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_sw.png" />
+    <Content Include="public\js\artDialog4\skins\idialog\ie6\aui_w.png" />
+    <Content Include="public\js\artDialog4\skins\opera.css" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_close.hover.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_close.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_e.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_n.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_ne.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_nw.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_s.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_se.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_sw.png" />
+    <Content Include="public\js\artDialog4\skins\opera\ie6\aui_w.png" />
+    <Content Include="public\js\artDialog4\skins\opera\s1.png" />
+    <Content Include="public\js\artDialog4\skins\opera\s2.png" />
+    <Content Include="public\js\artDialog4\skins\simple.css" />
+    <Content Include="public\js\artDialog4\skins\twitter.css" />
+    <Content Include="public\js\htmlformart.js" />
+    <Content Include="public\js\jquery-1.7.2.min.js" />
+    <Content Include="public\js\jquery.cookie.js" />
+    <Content Include="public\js\jquery.htmlClean.min.js" />
+    <Content Include="public\js\jquery.validate.js" />
+    <Content Include="public\js\template.js" />
+    <Content Include="public\js\zen.js" />
+    <Content Include="Set\MobanShow.aspx" />
+    <Content Include="Set\MbType.aspx" />
+    <Content Include="Set\MbTypeEdit.aspx" />
+    <Content Include="Set\Tools.aspx" />
+    <Content Include="Set\ToolEdit.aspx" />
+    <Content Include="Tool\KuangCode.aspx" />
+    <Content Include="Tool\Code.aspx" />
+    <Content Include="Tool\CodeEdit.aspx" />
+    <Content Include="Tool\CodeShow.aspx" />
+    <Content Include="Tool\TbData.aspx" />
+    <Content Include="Tool\DbDoc.aspx" />
+    <Content Include="Tool\RegTest.aspx" />
+    <Content Include="Tool\DbSql.aspx" />
+    <Content Include="Tool\DbCount.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Set\DbConn.aspx" />
+    <Content Include="Set\DbConnEdit.aspx" />
+    <Content Include="Set\Moban.aspx" />
+    <Content Include="FieldAll.aspx" />
+    <Content Include="Set\Dic.aspx" />
+    <Content Include="Set\DicEdit.aspx" />
+    <Content Include="Tool\Sql.aspx" />
+    <Content Include="Tool\Excel.aspx" />
+    <Content Include="Tool\Kuang.aspx" />
+    <Content Include="Field.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Code\BasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DataPager1.ascx.cs">
+      <DependentUpon>DataPager1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DataPager1.ascx.designer.cs">
+      <DependentUpon>DataPager1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DataPager.ascx.cs">
+      <DependentUpon>DataPager.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controls\DataPager.ascx.designer.cs">
+      <DependentUpon>DataPager.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GenCode.aspx.cs">
+      <DependentUpon>GenCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GenCode.aspx.designer.cs">
+      <DependentUpon>GenCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\MobanEdit.aspx.cs">
+      <DependentUpon>MobanEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\MobanEdit.aspx.designer.cs">
+      <DependentUpon>MobanEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Code\PageTool.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Set\MobanShow.aspx.cs">
+      <DependentUpon>MobanShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\MobanShow.aspx.designer.cs">
+      <DependentUpon>MobanShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\MbType.aspx.cs">
+      <DependentUpon>MbType.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\MbType.aspx.designer.cs">
+      <DependentUpon>MbType.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\MbTypeEdit.aspx.cs">
+      <DependentUpon>MbTypeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\MbTypeEdit.aspx.designer.cs">
+      <DependentUpon>MbTypeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\Tools.aspx.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\Tools.aspx.designer.cs">
+      <DependentUpon>Tools.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\ToolEdit.aspx.cs">
+      <DependentUpon>ToolEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\ToolEdit.aspx.designer.cs">
+      <DependentUpon>ToolEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Set\DbConn.aspx.cs">
+      <DependentUpon>DbConn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\DbConn.aspx.designer.cs">
+      <DependentUpon>DbConn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\DbConnEdit.aspx.cs">
+      <DependentUpon>DbConnEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\DbConnEdit.aspx.designer.cs">
+      <DependentUpon>DbConnEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\Moban.aspx.cs">
+      <DependentUpon>Moban.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\Moban.aspx.designer.cs">
+      <DependentUpon>Moban.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FieldAll.aspx.cs">
+      <DependentUpon>FieldAll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FieldAll.aspx.designer.cs">
+      <DependentUpon>FieldAll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\Dic.aspx.cs">
+      <DependentUpon>Dic.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\Dic.aspx.designer.cs">
+      <DependentUpon>Dic.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Set\DicEdit.aspx.cs">
+      <DependentUpon>DicEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Set\DicEdit.aspx.designer.cs">
+      <DependentUpon>DicEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\KuangCode.aspx.cs">
+      <DependentUpon>KuangCode.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\KuangCode.aspx.designer.cs">
+      <DependentUpon>KuangCode.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Code.aspx.cs">
+      <DependentUpon>Code.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\Code.aspx.designer.cs">
+      <DependentUpon>Code.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\CodeEdit.aspx.cs">
+      <DependentUpon>CodeEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\CodeEdit.aspx.designer.cs">
+      <DependentUpon>CodeEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\CodeShow.aspx.cs">
+      <DependentUpon>CodeShow.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\CodeShow.aspx.designer.cs">
+      <DependentUpon>CodeShow.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\TbData.aspx.cs">
+      <DependentUpon>TbData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\TbData.aspx.designer.cs">
+      <DependentUpon>TbData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Sql.aspx.cs">
+      <DependentUpon>Sql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\Sql.aspx.designer.cs">
+      <DependentUpon>Sql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Excel.aspx.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\Excel.aspx.designer.cs">
+      <DependentUpon>Excel.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\Kuang.aspx.cs">
+      <DependentUpon>Kuang.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\Kuang.aspx.designer.cs">
+      <DependentUpon>Kuang.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Field.aspx.cs">
+      <DependentUpon>Field.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Field.aspx.designer.cs">
+      <DependentUpon>Field.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\DbDoc.aspx.cs">
+      <DependentUpon>DbDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\DbDoc.aspx.designer.cs">
+      <DependentUpon>DbDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\RegTest.aspx.cs">
+      <DependentUpon>RegTest.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\RegTest.aspx.designer.cs">
+      <DependentUpon>RegTest.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\DbSql.aspx.cs">
+      <DependentUpon>DbSql.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\DbSql.aspx.designer.cs">
+      <DependentUpon>DbSql.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Tool\DbCount.aspx.cs">
+      <DependentUpon>DbCount.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Tool\DbCount.aspx.designer.cs">
+      <DependentUpon>DbCount.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\J.Ajax\J.Ajax.csproj">
+      <Project>{0151E882-2DE2-44BF-BCF0-B7D10B60BE62}</Project>
+      <Name>yb.Ajax</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\J.Common\J.Common.csproj">
+      <Project>{DDB47077-0DAE-4D87-B741-471076132BD9}</Project>
+      <Name>yb.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\J.Data\J.Data.csproj">
+      <Project>{D988D0DA-99C9-4BB6-98BB-4C0526F6F524}</Project>
+      <Name>yb.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="public\codeMirror\.npmignore" />
+    <None Include="public\codeMirror\.travis.yml" />
+    <None Include="public\codeMirror\AUTHORS" />
+    <None Include="public\codeMirror\bin\authors.sh" />
+    <None Include="public\codeMirror\bin\compress" />
+    <None Include="public\codeMirror\bin\lint" />
+    <None Include="public\codeMirror\bin\release" />
+    <None Include="public\codeMirror\bin\source-highlight" />
+    <None Include="public\codeMirror\bower.json" />
+    <None Include="public\codeMirror\CONTRIBUTING.md" />
+    <None Include="public\codeMirror\doc\logo.svg" />
+    <None Include="public\codeMirror\LICENSE" />
+    <None Include="public\codeMirror\package.json" />
+    <None Include="public\codeMirror\README.md" />
+    <None Include="public\dwz\themes\azure\images\grid\Thumbs.db" />
+    <None Include="public\dwz\themes\azure\images\layout\Thumbs.db" />
+    <None Include="public\dwz\themes\azure\images\menu\Thumbs.db" />
+    <None Include="public\dwz\themes\azure\images\progressBar\Thumbs.db" />
+    <None Include="public\dwz\themes\azure\images\shadow\Thumbs.db" />
+    <None Include="public\dwz\themes\azure\images\tabs\Thumbs.db" />
+    <None Include="public\dwz\themes\azure\images\tree\Thumbs.db" />
+    <None Include="public\dwz\themes\default\images\panel\Thumbs.db" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="out\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>59385</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

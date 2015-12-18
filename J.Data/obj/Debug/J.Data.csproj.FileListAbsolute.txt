@@ -1,0 +1,11 @@
+D:\J.ZenCode\J.Data\bin\J.Data.dll
+D:\J.ZenCode\J.Data\bin\J.Data.pdb
+D:\J.ZenCode\J.Data\bin\J.Ajax.dll
+D:\J.ZenCode\J.Data\bin\J.Common.dll
+D:\J.ZenCode\J.Data\bin\MySql.Data.dll
+D:\J.ZenCode\J.Data\bin\J.Ajax.pdb
+D:\J.ZenCode\J.Data\bin\J.Common.pdb
+D:\J.ZenCode\J.Data\obj\Debug\ResolveAssemblyReference.cache
+D:\J.ZenCode\J.Data\obj\Debug\J.Data.dll
+D:\J.ZenCode\J.Data\obj\Debug\J.Data.pdb
+D:\J.ZenCode\J.Data\bin\System.Data.SQLite.dll

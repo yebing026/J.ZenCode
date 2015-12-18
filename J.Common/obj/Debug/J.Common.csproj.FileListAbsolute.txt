@@ -1,0 +1,5 @@
+D:\J.ZenCode\J.Common\bin\Debug\J.Common.dll
+D:\J.ZenCode\J.Common\bin\Debug\J.Common.pdb
+D:\J.ZenCode\J.Common\obj\Debug\ResolveAssemblyReference.cache
+D:\J.ZenCode\J.Common\obj\Debug\J.Common.dll
+D:\J.ZenCode\J.Common\obj\Debug\J.Common.pdb
